@@ -62,6 +62,8 @@ services:
     image: ragingcomputer/hds-821pr-mqtt
     container_name: "mqtt_pip"
     restart: always
+    devices:
+      - /dev/ttyS0:/dev/ttyS0
     environment:
       - MQTT_SERVER="192.168.0.10"
       - MQTT_USERNAME="mqttusername"
